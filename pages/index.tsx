@@ -61,9 +61,9 @@ const Home: NextPage = () => {
   // render data
   return (
     <>
-      {/* {data.map((release) => (
+      {data.map((release) => (
         <ReleaseCard key={release.id} release={release} />
-      ))} */}
+      ))}
     </>
   );
 };
