@@ -47,17 +47,23 @@ const Home: NextPage = () => {
     console.log(data);
   }, [data, error]);
 
+  if (!Userfront.user.userId) {
+    return (
+      <div>
+        <SignInFormComponent/>
+      </div>
+    )
+  }
+
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
   // render data
   return (
     <>
-      
-
-      {data.map((release) => (
+      {/* {data.map((release) => (
         <ReleaseCard key={release.id} release={release} />
-      ))}
+      ))} */}
     </>
   );
 };
